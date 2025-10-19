@@ -22,6 +22,7 @@ body {
 header {
     background-color: #ffffff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding-left: 15px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -32,7 +33,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1rem 1rem;
 }
 
 .nav-container h1 {
@@ -169,6 +170,50 @@ header {
     left: 0;
 }
 
+/* Certifications Section */
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.certification-card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.certification-card h3 {
+    color: #2c5aa0;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.certification-card p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.certification-card a {
+    display: inline-block;
+    color: #28a745;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.certification-card a:hover {
+    color: #218838;
+}
+
 /* Contact Section */
 .contact-info {
     list-style: none;
@@ -225,6 +270,10 @@ footer p {
     .skills-list {
         grid-template-columns: 1fr;
     }
+
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 480px) {
@@ -240,3 +289,6 @@ footer p {
         margin: 0.5rem 0;
     }
 }
+/* main{
+    padding: 5px 5px;
+} */

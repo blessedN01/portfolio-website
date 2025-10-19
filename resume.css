@@ -1,0 +1,157 @@
+/* Resume Styles - Matching website design */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 20px;
+}
+
+.resume-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+.resume-header {
+    text-align: center;
+    border-bottom: 2px solid #2c5aa0;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.resume-header h1 {
+    color: #2c5aa0;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.resume-header .contact-info {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.resume-section {
+    margin-bottom: 30px;
+}
+
+.resume-section h2 {
+    color: #2c5aa0;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #28a745;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.resume-section p {
+    margin-bottom: 15px;
+}
+
+.education-item, .project-item {
+    margin-bottom: 20px;
+}
+
+.education-item h3, .project-item h3 {
+    color: #2c5aa0;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.institution, .date {
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 5px;
+}
+
+.date {
+    font-weight: normal;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.skill-category h4 {
+    color: #2c5aa0;
+    margin-bottom: 10px;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-category li {
+    margin-bottom: 5px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.skill-category li:before {
+    content: "•";
+    color: #28a745;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.languages-list {
+    list-style: none;
+    padding: 0;
+}
+
+.languages-list li {
+    margin-bottom: 5px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.languages-list li:before {
+    content: "•";
+    color: #28a745;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Print styles for PDF generation */
+@media print {
+    body {
+        padding: 0;
+    }
+
+    .resume-container {
+        box-shadow: none;
+        padding: 20px;
+    }
+
+    .resume-header {
+        border-bottom: 2px solid #2c5aa0;
+    }
+
+    .resume-section h2 {
+        border-bottom: 1px solid #28a745;
+    }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .resume-container {
+        padding: 20px;
+    }
+
+    .resume-header h1 {
+        font-size: 2rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
